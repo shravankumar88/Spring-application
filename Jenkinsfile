@@ -1,19 +1,6 @@
 pipeline{
 	agent any
-		options {
-        office365ConnectorWebhooks([[
-                    startNotification: true,
-                    notifyAborted: true, 
-					notifyBackToNormal: true, 
-					notifyFailure: true, 
-					notifyNotBuilt: true, 
-					notifyRepeatedFailure: true, 
-					notifySuccess: true, 
-					notifyUnstable: true, 
-					url: 'https://dell.webhook.office.com/webhookb2/e19e7620-1016-4e14-9946-77b8c138c497@945c199a-83a2-4e80-9f8c-5a91be5752dd/IncomingWebhook/942a5149d27546b7876d2766d75f3b97/88033528-8d47-4bef-9143-9763bd233599'
-    	        ]]
-       		)
-    	}
+		
 	environment{
 		BUILD_VERSION="${env.BUILD_ID}"
 		JOB_NAME="${env.JOB_NAME}"
